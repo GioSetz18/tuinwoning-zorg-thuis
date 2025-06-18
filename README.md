@@ -1,5 +1,21 @@
-# Welcome to your Lovable project
+# Tuinwoning Zorg Thuis
 
+Een innovatieve, hoogwaardige oplossing voor mantelzorg: een volledig uitgeruste tuinwoning, geplaatst in uw achtertuin. Ideaal voor ouders of geliefden die zorg dichtbij nodig hebben, zonder verlies van privacy of comfort.
+
+## 🌐 Website
+[https://tuinwoningzorgthuis.nl](https://tuinwoningzorgthuis.nl)
+
+## 📄 Wat bieden wij?
+- Comfortabele prefab mantelzorgwoningen
+- Snelle levering en plaatsing
+- Brochure download & offerte aanvraag
+- Persoonlijk contact via e-mail of telefoon
+
+## 📈 SEO & AI integratie
+- Structured data met [Schema.org](https://schema.org)
+- Sitemap + robots.txt geoptimaliseerd voor Google, Bing, en ChatGPT
+
+# Welcome to your Lovable project
 ## Project info
 
 **URL**: https://lovable.dev/projects/97de6b85-3d2c-4b7e-9d70-71b5605085d0
