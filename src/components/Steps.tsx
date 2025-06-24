@@ -47,7 +47,7 @@ const Steps = () => {
           <p className="text-lg mb-6 text-brown">
             Wilt u meer weten over ons 7-stappenplan?
           </p>
-          <Button asChild variant="outline" className="border-sage text-sage hover:bg-sage/10">
+          <Button asChild className="bg-sage text-white hover:bg-sage/90">
             <Link to="/werkwijze">Bekijk onze volledige werkwijze</Link>
           </Button>
         </div>
