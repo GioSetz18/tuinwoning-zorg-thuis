@@ -18,7 +18,7 @@ const CTASection = () => {
             <Button asChild className="bg-white text-sage hover:bg-sage hover:text-white font-medium px-8 py-6 text-base">
               <Link to="/brochure">Brochure aanvragen</Link>
             </Button>
-            <Button asChild variant="outline" className="border-white text-white hover:bg-orange-500 hover:text-white hover:border-orange-500 font-medium px-8 py-6 text-base">
+            <Button asChild variant="outline" className="bg-orange-500 border-orange-500 text-white hover:bg-orange-600 hover:border-orange-600 font-medium px-8 py-6 text-base">
               <Link to="/contact">Contact opnemen</Link>
             </Button>
           </div>
