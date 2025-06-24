@@ -15,7 +15,7 @@ const CTASection = () => {
             Vraag onze brochure aan of neem contact met ons op voor een persoonlijk gesprek over de mogelijkheden.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button asChild className="bg-white text-sage hover:bg-sage hover:text-white font-medium px-8 py-6 text-base">
+            <Button asChild className="bg-white border-2 border-white text-sage hover:bg-sage hover:text-white hover:border-white font-medium px-8 py-6 text-base">
               <Link to="/brochure">Brochure aanvragen</Link>
             </Button>
             <Button asChild variant="outline" className="bg-orange-500 border-orange-500 text-white hover:bg-orange-600 hover:border-orange-600 font-medium px-8 py-6 text-base">
