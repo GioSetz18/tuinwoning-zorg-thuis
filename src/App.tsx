@@ -9,6 +9,10 @@ import SEO from "@/components/SEO";
 import Index from "./pages/Index";
 import AboutUs from "./pages/AboutUs";
 import Models from "./pages/Models";
+import ModelComfort from "./pages/ModelComfort";
+import ModelPremium from "./pages/ModelPremium";
+import ModelDeluxe from "./pages/ModelDeluxe";
+import ModelCustom from "./pages/ModelCustom";
 import Workflow from "./pages/Workflow";
 import FAQPage from "./pages/FAQPage";
 import Contact from "./pages/Contact";
@@ -30,6 +34,10 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/over-ons" element={<AboutUs />} />
             <Route path="/modellen" element={<Models />} />
+            <Route path="/modellen/comfort" element={<ModelComfort />} />
+            <Route path="/modellen/premium" element={<ModelPremium />} />
+            <Route path="/modellen/deluxe" element={<ModelDeluxe />} />
+            <Route path="/modellen/custom" element={<ModelCustom />} />
             <Route path="/werkwijze" element={<Workflow />} />
             <Route path="/faq" element={<FAQPage />} />
             <Route path="/contact" element={<Contact />} />
