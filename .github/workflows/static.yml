@@ -37,10 +37,11 @@ jobs:
 
       # 3  Install deps & build
       - run: npm ci --omit=dev                        # deterministic, no devDeps in prod image
+      - run: npm install                              # install prod deps, if any
       - run: npm run build                            # outputs ./dist
 
       # 4  Package the static site for Pages
-      - uses: actions/upload-pages-artifact@v3        # v3 now wraps upload-artifact v4  :contentReference[oaicite:1]{index=1}
+      - uses: actions/upload-pages-artifact@v4        # v4 now 
         with:
           path: ./dist
 
