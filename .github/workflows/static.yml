@@ -24,12 +24,23 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v1   # bun install/build is fastest; swap for node if you prefer
-      - run: bun install
-      - run: bun run build           # produces ./dist
-      - uses: actions/upload-pages-artifact@v2
+      # 1  Check out your code
+      - uses: actions/checkout@v4                     # Node 20-runtime action
+
+      # 2  Set up Node + automatic npm cache
+      - uses: actions/setup-node@v4                   # latest major, already on Node 20 :contentReference[oaicite:0]{index=0}
+        with:
+          node-version: 20
+          cache: npm
+
+      # 3  Install deps & build
+      - run: npm ci --omit=dev                        # deterministic, no devDeps in prod image
+      - run: npm run build                            # outputs ./dist
+
+      # 4  Package the static site for Pages
+      - uses: actions/upload-pages-artifact@v3        # v3 now wraps upload-artifact v4  :contentReference[oaicite:1]{index=1}
         with:
           path: ./dist
 
