@@ -7,14 +7,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Nodwe modules
-./node_modules
-./package-lock.json
-./package.json
-./dist
-./dist-ssr
+node_modules
+dist
+dist-ssr
 *.local
-
 
 # Editor directories and files
 .vscode/*
@@ -26,5 +22,3 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
-
-node_modules

@@ -22,51 +22,22 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      # 1  Check out your code
-      - uses: actions/checkout@v4                     # Node 20-runtime action
-
-      # 2  Set up Node + automatic npm cache
-      - uses: actions/setup-node@v4                   # latest major, already on Node 20 :contentReference[oaicite:0]{index=0}
-        with:
-          node-version: 20
-          cache: npm
-
-      # 3  Install deps & build
-      - run: npm ci --omit=dev                        # deterministic, no devDeps in prod image
-      - run: npm run build                            # outputs ./dist
-
-      # 4  Package the static site for Pages
-      - uses: actions/upload-pages-artifact@v3        # v3 now wraps upload-artifact v4  :contentReference[oaicite:1]{index=1}
-        with:
-          path: ./dist
-
-# jobs:
-#   # Single deploy job since we're just deploying
-#   deploy:
-#     environment:
-#       name: github-pages
-#       url: ${{ steps.deployment.outputs.page_url }}
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout
-#         uses: actions/checkout@v4
-#       - name: Setup Pages
-#         uses: actions/configure-pages@v5
-#       - name: Upload artifact
-#         uses: actions/upload-pages-artifact@v3
-#         with:
-#           # Upload entire repository
-#           path: '.'
-#       - name: Deploy to GitHub Pages
-#         id: deployment
-#         uses: actions/deploy-pages@v4
-
+  # Single deploy job since we're just deploying
   deploy:
-    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/deploy-pages@v2
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
