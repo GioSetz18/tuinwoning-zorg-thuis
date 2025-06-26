@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -298,7 +297,7 @@ const Contact = () => {
               <Button 
                 className="mt-8 w-full bg-green-500 hover:bg-green-600 flex items-center justify-center gap-2"
                 onClick={() => {
-                  window.open('https://wa.me/31123456789', '_blank');
+                  window.open('https://wa.me/31657254537', '_blank');
                 }}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
