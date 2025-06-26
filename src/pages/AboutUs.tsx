@@ -55,7 +55,7 @@ const AboutUs = () => {
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="md:w-1/4">
                 <div className="w-40 h-40 rounded-full overflow-hidden mx-auto">
-                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="Oprichter Tuinwoning.nl" className="w-full h-full object-cover" />
+                  <img alt="Oprichter Tuinwoning.nl" className="w-full h-full object-cover" src="https://images.marktplaats.com/api/v1/profile-mp-p/images/d2/d2dba3d5-d1d0-415a-a623-ae346fdc5193?rule=ecg_mp_eps$_85" />
                 </div>
               </div>
               <div className="md:w-3/4">
