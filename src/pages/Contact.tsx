@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -251,7 +252,7 @@ const Contact = () => {
                   <Phone className="w-5 h-5 text-sage mt-1 mr-4" />
                   <div>
                     <h3 className="font-bold text-charcoal">Telefoon</h3>
-                    <p className="text-brown">+31 (0) 123 456 789</p>
+                    <p className="text-brown">+31 6 57254537</p>
                   </div>
                 </div>
                 
@@ -268,9 +269,9 @@ const Contact = () => {
                   <div>
                     <h3 className="font-bold text-charcoal">Adres</h3>
                     <p className="text-brown">
-                      Voorbeeldstraat 123<br />
-                      1234 AB Amsterdam<br />
-                      Nederland
+                      Pienemanstraat 114<br />
+                      6717 WG Ede<br />
+                      Gelderland, Nederland
                     </p>
                   </div>
                 </div>
@@ -288,9 +289,18 @@ const Contact = () => {
                 </div>
               </div>
               
-              {/* Map Placeholder - In a real implementation, this would be replaced with a Google Maps component */}
-              <div className="mt-8 h-64 bg-sage/10 rounded-xl flex items-center justify-center">
-                <p className="text-brown">Google Maps zou hier komen</p>
+              {/* Google Maps Embed */}
+              <div className="mt-8 h-64 rounded-xl overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.5234567890123!2d5.644444415673828!3d52.03888997972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c7b7e8a8a8a8a8%3A0x8a8a8a8a8a8a8a8a!2sPienemanstraat%20114%2C%206717%20WG%20Ede!5e0!3m2!1snl!2snl!4v1234567890123!5m2!1snl!2snl"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Tuinwoning.nl locatie"
+                ></iframe>
               </div>
               
               {/* WhatsApp Button */}
