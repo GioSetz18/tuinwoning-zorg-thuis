@@ -34,10 +34,8 @@ const TestimonialPolman = () => {
           </div>
 
           <div className="prose prose-lg max-w-none text-brown leading-relaxed">
-            <p>Onze zoon was al een tijd op zoek naar een geschikte woning, samen met zijn vrouw en kinderen. 
-Niet gemakkelijk in deze tijd van woningschaarste en torenhoge prijzen. 
-Wij wonen buitenaf op een door ons zeer geliefde plek aan het einde van een heel apart oprijlaantje. 
-Ruimte genoeg om de deur, midden tussen de natuur.
+            <p>Onze zoon was al een tijd op zoek naar een geschikte woning, samen met zijn vrouw en kinderen.  Niet gemakkelijk in deze tijd van woningschaarste en torenhoge prijzen.  Wij wonen buitenaf op een door ons zeer geliefde plek aan het einde van een heel apart oprijlaantje.  Ruimte genoeg om de deur, midden tussen de natuur.
+
           </p>
 
             <p>Na wat speurwerk op internet belanden we op de website van Tuinwoning.nl waarbij het idee geboren werd een kant-en-klare woning op maat te laten bouwen. Na een gesprek met de adviseur van Tuinwoning.nl was de kogel definitief door de kerk en waren we zeer enthousiast over de mogelijkheden. 
