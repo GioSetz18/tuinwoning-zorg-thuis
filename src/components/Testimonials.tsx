@@ -6,12 +6,12 @@ const testimonials = [
   {
     name: "Jeroen (45)",
     quote: "Mijn moeder woont nu vlakbij ons en we hebben onze rust allebei terug.",
-    image: "https://images.unsplash.com/photo-1439886183900-e79ec0057170?w=400"
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=300&fit=crop&crop=faces"
   },
   {
     name: "Ria (71)",
     quote: "Ik voel me veilig en zelfstandig tegelijk.",
-    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400"
+    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=300&fit=crop&crop=faces"
   }
 ];
 
