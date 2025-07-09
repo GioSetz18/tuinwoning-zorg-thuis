@@ -6,7 +6,7 @@ const testimonials = [
   {
     name: "Jeroen (45)",
     quote: "Mijn moeder woont nu vlakbij ons en we hebben onze rust allebei terug.",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=300&fit=crop&crop=faces"
+    image: "https://www.tuinwoning.nl/app/uploads/2020/06/info-bg.jpg"
   },
   {
     name: "Ria (71)",
