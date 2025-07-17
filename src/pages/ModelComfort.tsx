@@ -26,7 +26,7 @@ const ModelComfort = () => {
 
   const images = [
     'https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?w=800',
-    'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800',
+    'https://www.tuinwoning.nl/app/uploads/2022/12/Jachthavendijk-9-Balk-1-1017x756.jpg',
     'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800'
   ];
 
