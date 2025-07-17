@@ -1,83 +1,53 @@
-import React, { useEffect, useState } from 'react';
+
+import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CTASection from '@/components/CTASection';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { ArrowRight } from 'lucide-react';
+
+const models = [
+  {
+    id: 'comfort',
+    name: 'Comfort',
+    size: '45m²',
+    bedrooms: 1,
+    description: 'Compacte, volledig toegankelijke tuinwoning met aparte slaapkamer.',
+    image: 'https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?w=800'
+  },
+  {
+    id: 'premium',
+    name: 'Premium',
+    size: '60m²',
+    bedrooms: 2,
+    description: 'Ruime tuinwoning met twee slaapkamers en luxe afwerking.',
+    image: 'https://images.unsplash.com/photo-1600607686527-6fb886090705?w=800'
+  },
+  {
+    id: 'deluxe',
+    name: 'Deluxe',
+    size: '75m²',
+    bedrooms: 2,
+    description: 'Onze meest ruime tuinwoning met twee grote slaapkamers en bijkeuken.',
+    image: 'https://images.unsplash.com/photo-1618220179428-22790b461013?w=800'
+  },
+  {
+    id: 'custom',
+    name: 'Op Maat',
+    size: 'Variabel',
+    bedrooms: 'Naar wens',
+    description: 'Volledig aangepast aan uw specifieke wensen en situatie.',
+    image: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800'
+  },
+];
 
 const Models = () => {
+  // Scroll to top on component mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const floorplanImages = [
-    {
-      src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800',
-      alt: 'Plattegrond Comfort rechts'
-    },
-    {
-      src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800',
-      alt: 'Plattegrond Comfort links'
-    }
-  ];
-
-  const galleryImages = [
-    'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800',
-    'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800',
-    'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800',
-    'https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?w=800'
-  ];
-
-  const otherModels = [
-    { name: 'Premium', link: '/modellen/premium' },
-    { name: 'Deluxe', link: '/modellen/deluxe' },
-    { name: 'Op maat', link: '/modellen/custom' }
-  ];
-
-  const techSpecs = [
-    {
-      heading: 'Prijzen & afmetingen',
-      items: [
-        { label: 'Vanaf', value: '€152.000 inclusief plaatsing' },
-        { label: 'Oppervlakte', value: '39 m²' },
-        { label: 'Unit afmetingen', value: '12 m × 3,3 m' },
-        { label: 'Hoogte', value: '3,5 m zonder fundering' },
-        { label: 'Benodigde kavel', value: 'ca. 60 m²' }
-      ]
-    },
-    {
-      heading: 'Exterieur',
-      items: [
-        { label: 'Kleuren', value: 'Naturel hout, wit, antraciet' },
-        { label: 'Dak', value: 'EPDM dakbedekking met regenwaterafvoer' },
-        { label: 'Gevelbekleding', value: 'Thermisch gemodificeerd hout of vezelcementpanelen' },
-        { label: 'Ramen & deuren', value: 'HR++ glas, draaikiepramen, dubbele tuindeuren' }
-      ]
-    },
-    {
-      heading: 'Interieur',
-      items: [
-        { label: 'Plafondhoogte', value: '2,5 m – 2,8 m' },
-        { label: 'Vloer', value: 'PVC of marmoleum naar keuze' },
-        { label: 'Keuken', value: 'Complete keuken met inductieplaat, koelkast, oven' },
-        { label: 'Badkamer', value: 'Inloopdouche, toilet, wastafel, antislipvloer' },
-        { label: 'Slaapruimte', value: '1 slaapkamer met ruimte voor tweepersoonsbed' }
-      ]
-    },
-    {
-      heading: 'Techniek & installatie',
-      items: [
-        { label: 'Verwarming & koeling', value: 'Elektrische vloerverwarming en airco' },
-        { label: 'Isolatie', value: 'Dak Rc 6,0 / Gevel Rc 4,7 / Vloer Rc 4,7' },
-        { label: 'Warm water', value: 'Elektrische boiler' },
-        { label: 'Ventilatie', value: 'Mechanische ventilatie met CO₂-sturing' },
-        { label: 'Veiligheid', value: 'Rookmelders, brandwerende afwerking, optioneel sprinklersysteem' }
-      ]
-    }
-  ];
 
   return (
     <main className="min-h-screen">
@@ -86,177 +56,137 @@ const Models = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-16 md:pt-36 md:pb-20 bg-beige">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-charcoal mb-6">
-              Comfort model
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-charcoal mb-6">
+              Onze Modellen
             </h1>
-            <p className="text-xl md:text-2xl text-brown mb-6">
-              Compact en compleet, ontworpen voor comfortabel zelfstandig wonen
+            <p className="text-lg md:text-xl text-brown">
+              Ontdek onze verschillende tuinwoningen, elk ontworpen voor comfort en functionaliteit
             </p>
-            <p className="text-lg text-sage font-semibold mb-8">
-              Vanaf €152.000 inclusief plaatsing
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild className="bg-sage hover:bg-sage/90">
-                <Link to="/brochure">Vraag brochure aan</Link>
-              </Button>
-              <Button asChild variant="outline" className="border-sage text-sage hover:bg-sage hover:text-white">
-                <Link to="/contact">Plan een gesprek</Link>
-              </Button>
-            </div>
           </div>
         </div>
       </section>
-
-      {/* Variant Tabs Section */}
-      <section className="py-16 bg-white">
+      
+      {/* Models Grid */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="container-custom">
-          <Tabs defaultValue="plattegrond" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 max-w-2xl mx-auto mb-12">
-              <TabsTrigger value="plattegrond">Plattegrond</TabsTrigger>
-              <TabsTrigger value="afbeeldingen">Afbeeldingen</TabsTrigger>
-              <TabsTrigger value="specificaties">Technische specificaties</TabsTrigger>
-            </TabsList>
-            
-            <TabsContent value="plattegrond" className="space-y-8">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-charcoal mb-4">Plattegrond</h2>
-                <div className="flex justify-center gap-8 text-lg text-brown">
-                  <span><strong>39 m²</strong> woonoppervlak</span>
-                  <span><strong>12 m × 5 m</strong> benodigde ruimte</span>
+          <div className="grid md:grid-cols-2 gap-8">
+            {models.map((model) => (
+              <Card key={model.id} className="overflow-hidden border-none rounded-xl card-shadow">
+                <div className="aspect-[16/9] overflow-hidden">
+                  <img 
+                    src={model.image}
+                    alt={`Tuinwoning ${model.name}`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
-              </div>
-              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                {floorplanImages.map((image, index) => (
-                  <div key={index} className="bg-offwhite rounded-xl p-6">
-                    <img 
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-auto rounded-lg"
-                    />
-                    <p className="text-center text-brown mt-4">{image.alt}</p>
+                <CardContent className="p-6">
+                  <div className="flex justify-between items-center mb-4">
+                    <h3 className="text-2xl font-bold text-charcoal">{model.name}</h3>
+                    <span className="bg-sage/10 text-sage px-3 py-1 rounded-lg text-sm font-medium">
+                      {model.size}
+                    </span>
                   </div>
-                ))}
-              </div>
-            </TabsContent>
-            
-            <TabsContent value="afbeeldingen" className="space-y-8">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-charcoal mb-4">Foto's</h2>
-                <p className="text-lg text-brown">Ontdek het interieur en exterieur van het Comfort model</p>
-              </div>
-              <div className="max-w-4xl mx-auto">
-                <Carousel className="w-full">
-                  <CarouselContent>
-                    {galleryImages.map((image, index) => (
-                      <CarouselItem key={index}>
-                        <div className="aspect-video rounded-xl overflow-hidden">
-                          <img 
-                            src={image}
-                            alt={`Comfort model foto ${index + 1}`}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPrevious />
-                  <CarouselNext />
-                </Carousel>
-              </div>
-            </TabsContent>
-            
-            <TabsContent value="specificaties" className="space-y-8">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-charcoal mb-4">Technische specificaties</h2>
-                <p className="text-lg text-brown">Alle details van het Comfort model</p>
-              </div>
-              <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                {techSpecs.map((section, sectionIndex) => (
-                  <Card key={sectionIndex} className="border-none card-shadow">
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-bold text-charcoal mb-4">{section.heading}</h3>
-                      <div className="space-y-3">
-                        {section.items.map((item, itemIndex) => (
-                          <div key={itemIndex} className="flex justify-between items-start">
-                            <span className="text-brown font-medium">{item.label}:</span>
-                            <span className="text-charcoal text-right max-w-xs">{item.value}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </TabsContent>
-          </Tabs>
-        </div>
-      </section>
-
-      {/* Intro Section */}
-      <section className="py-16 bg-offwhite">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-charcoal mb-8">
-              Comfortabel wonen in eigen tuin
-            </h2>
-            <div className="space-y-6 text-lg text-brown">
-              <p>
-                Het Comfort-model biedt alle benodigde voorzieningen op een efficiënte en toegankelijke manier. 
-                Ideaal voor alleenstaanden of stellen die zelfstandig willen wonen met zorg binnen handbereik.
-              </p>
-              <p>
-                Dankzij de slimme indeling voelt het interieur ruim aan, met veel daglicht en directe verbinding met de tuin.
-              </p>
-              <p>
-                De woning is volledig elektrisch, onderhoudsarm en duurzaam gebouwd in Nederland.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Other Models Section */}
-      <section className="py-16 bg-white">
-        <div className="container-custom">
-          <h2 className="text-3xl font-bold text-charcoal mb-12 text-center">
-            Andere modellen verkennen
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {otherModels.map((model, index) => (
-              <Card key={index} className="border-none card-shadow hover:shadow-lg transition-shadow">
-                <CardContent className="p-6 text-center">
-                  <h3 className="text-xl font-bold text-charcoal mb-4">{model.name}</h3>
-                  <Button asChild variant="outline" className="border-sage text-sage hover:bg-sage hover:text-white">
-                    <Link to={model.link}>Bekijk model</Link>
+                  
+                  <p className="text-brown mb-4">
+                    {model.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-4 mb-6">
+                    <span className="bg-beige px-3 py-1 rounded-lg text-xs font-medium text-charcoal">
+                      {model.bedrooms} {model.bedrooms === 'Naar wens' ? '' : 'slaapkamer' + (typeof model.bedrooms === 'number' && model.bedrooms > 1 ? 's' : '')}
+                    </span>
+                    <span className="bg-beige px-3 py-1 rounded-lg text-xs font-medium text-charcoal">
+                      Volledig toegankelijk
+                    </span>
+                    <span className="bg-beige px-3 py-1 rounded-lg text-xs font-medium text-charcoal">
+                      Inclusief keuken
+                    </span>
+                  </div>
+                  
+                  <Button asChild className="w-full bg-sage hover:bg-opacity-90">
+                    <Link to={`/modellen/${model.id}`}>
+                      <span>Bekijk details</span>
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-sage/10">
-        <div className="container-custom text-center">
-          <h2 className="text-3xl font-bold text-charcoal mb-6">
-            Interesse in het Comfort model?
-          </h2>
-          <p className="text-lg text-brown mb-8 max-w-2xl mx-auto">
-            Ontvang meer informatie of plan een persoonlijk gesprek om de mogelijkheden te bespreken.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild className="bg-sage hover:bg-sage/90">
-              <Link to="/brochure">Vraag brochure aan</Link>
-            </Button>
-            <Button asChild variant="outline" className="border-sage text-sage hover:bg-sage hover:text-white">
-              <Link to="/contact">Plan een gesprek</Link>
-            </Button>
+          
+          {/* Custom Options */}
+          <div className="mt-16 bg-sage/10 rounded-2xl p-8 md:p-12">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h2 className="text-3xl font-bold text-charcoal mb-4">
+                  Op zoek naar een oplossing op maat?
+                </h2>
+                <p className="text-brown mb-6">
+                  Naast onze standaard modellen bieden wij ook volledig op maat gemaakte tuinwoningen. 
+                  We houden rekening met uw specifieke wensen, de beschikbare ruimte en eventuele 
+                  toegankelijkheidseisen.
+                </p>
+                <Button asChild className="bg-sage hover:bg-opacity-90">
+                  <Link to="/contact">Vraag een persoonlijk adviesgesprek aan</Link>
+                </Button>
+              </div>
+              <div className="rounded-xl overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1569428034239-f9565e32e224?w=800" 
+                  alt="Op maat gemaakte tuinwoning" 
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
       
+      {/* Features Section */}
+      <section className="py-16 md:py-24 bg-offwhite">
+        <div className="container-custom">
+          <h2 className="text-3xl font-bold text-charcoal mb-12 text-center">
+            Standaard bij elke tuinwoning
+          </h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <div className="w-12 h-12 bg-sage/20 rounded-full flex items-center justify-center mb-4">
+                <span className="text-xl text-sage">✓</span>
+              </div>
+              <h3 className="text-lg font-bold text-charcoal mb-2">Volledig geïsoleerd</h3>
+              <p className="text-brown">Hoge isolatiewaarden voor comfort in alle seizoenen.</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <div className="w-12 h-12 bg-sage/20 rounded-full flex items-center justify-center mb-4">
+                <span className="text-xl text-sage">✓</span>
+              </div>
+              <h3 className="text-lg font-bold text-charcoal mb-2">Sleutelklaar opgeleverd</h3>
+              <p className="text-brown">Inclusief keuken, badkamer en alle afwerking.</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <div className="w-12 h-12 bg-sage/20 rounded-full flex items-center justify-center mb-4">
+                <span className="text-xl text-sage">✓</span>
+              </div>
+              <h3 className="text-lg font-bold text-charcoal mb-2">Rolstoelvriendelijk</h3>
+              <p className="text-brown">Ruime deuren en geen drempels voor optimale toegankelijkheid.</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <div className="w-12 h-12 bg-sage/20 rounded-full flex items-center justify-center mb-4">
+                <span className="text-xl text-sage">✓</span>
+              </div>
+              <h3 className="text-lg font-bold text-charcoal mb-2">5 jaar garantie</h3>
+              <p className="text-brown">Inclusief jaarlijkse controle en onderhoud.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <CTASection />
       <Footer />
     </main>
   );
