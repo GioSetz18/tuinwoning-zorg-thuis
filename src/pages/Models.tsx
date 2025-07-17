@@ -15,7 +15,7 @@ const models = [
     size: '45m²',
     bedrooms: 1,
     description: 'Compacte, volledig toegankelijke tuinwoning met aparte slaapkamer.',
-    image: 'https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?w=800'
+    image: 'https://www.tuinwoning.nl/app/uploads/2022/12/Jachthavendijk-9-Balk-5-453x379.jpg'
   },
   {
     id: 'premium',
