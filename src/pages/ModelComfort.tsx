@@ -147,6 +147,15 @@ const ModelComfort = () => {
               <h2 className="text-3xl font-bold text-charcoal mb-6 text-center">
                 Ideaal voor wie zelfstandigheid waardeert
               </h2>
+              
+              <div className="mb-8 text-center max-w-3xl mx-auto">
+                <p className="text-brown leading-relaxed mb-4">
+                  Heerlijke lichte woning voorzien van een lessenaarsdak met een aanbouw voorzien van een plat dak.
+                </p>
+                <p className="text-brown leading-relaxed">
+                  Deze woning is volgens de "BENG" norm, bijna energie neutraal gebouwd, gebouwd. extra geïsoleerd, voorzien van een warmtepomp, watergedragen vloerverwarming en zonnepanelen. hierdoor kon de woning vrijstaand worden geplaatst en heeft de woning een permanente vergunning.
+                </p>
+              </div>
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                   <h3 className="text-xl font-bold text-charcoal mb-4">Perfect voor:</h3>

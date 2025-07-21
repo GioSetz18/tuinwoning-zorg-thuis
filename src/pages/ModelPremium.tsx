@@ -57,7 +57,7 @@ const ModelPremium = () => {
                   Ruime tuinwoning met luxe afwerking en alle comfort voor een ontspannen leven.
                 </p>
                 <div className="flex items-center gap-4 mb-6">
-                  <span className="bg-sage text-white px-4 py-2 rounded-lg font-medium">60m²</span>
+                  <span className="bg-sage text-white px-4 py-2 rounded-lg font-medium">61m²</span>
                   <span className="bg-sage text-white px-4 py-2 rounded-lg font-medium">2 slaapkamers</span>
                   <span className="bg-sage text-white px-4 py-2 rounded-lg font-medium">Vanaf €69.900</span>
                 </div>
@@ -101,7 +101,7 @@ const ModelPremium = () => {
               <div className="space-y-4">
                 <div className="flex justify-between py-3 border-b border-sage/20">
                   <span className="font-medium text-charcoal">Oppervlakte</span>
-                  <span className="text-brown">60m²</span>
+                  <span className="text-brown">61m²</span>
                 </div>
                 <div className="flex justify-between py-3 border-b border-sage/20">
                   <span className="font-medium text-charcoal">Slaapkamers</span>
@@ -149,6 +149,18 @@ const ModelPremium = () => {
               <h2 className="text-3xl font-bold text-charcoal mb-6 text-center">
                 Luxe wonen met ruimte voor bezoek
               </h2>
+              
+              <div className="mb-8 text-center max-w-3xl mx-auto">
+                <p className="text-brown leading-relaxed mb-4">
+                  Woning met plat dak. Dit pand is geen standaard Mantelzorgwoning maar een atelier voor de goudsmid, 2 slaapkamers voor logies, en een badkamer. Waarmee aangegeven dat een woning verschillende functies kan hebben.
+                </p>
+                <p className="text-brown leading-relaxed mb-4">
+                  Door toepassing van natuurlijk hout als buitenbekleding, de veranda voor de openslaande deuren en plaatsing in de ruime tuin gaat de woning op in de omgeving en ziet eruit als een luxe buitenverblijf.
+                </p>
+                <p className="text-brown leading-relaxed">
+                  De woning heeft een oppervlakte van 61m2 en bestaat uit 1 gebouw met een losse aangebouwde berging.
+                </p>
+              </div>
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                   <h3 className="text-xl font-bold text-charcoal mb-4">Perfect voor:</h3>

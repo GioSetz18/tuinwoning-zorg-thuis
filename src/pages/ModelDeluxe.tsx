@@ -58,7 +58,7 @@ const ModelDeluxe = () => {
                   Onze meest luxueuze tuinwoning met alle denkbare comfort voor het ultieme woongenot.
                 </p>
                 <div className="flex items-center gap-4 mb-6">
-                  <span className="bg-sage text-white px-4 py-2 rounded-lg font-medium">75m²</span>
+                  <span className="bg-sage text-white px-4 py-2 rounded-lg font-medium">63m²</span>
                   <span className="bg-sage text-white px-4 py-2 rounded-lg font-medium">2+ kamers</span>
                   <span className="bg-sage text-white px-4 py-2 rounded-lg font-medium">Vanaf €89.900</span>
                 </div>
@@ -102,7 +102,7 @@ const ModelDeluxe = () => {
               <div className="space-y-4">
                 <div className="flex justify-between py-3 border-b border-sage/20">
                   <span className="font-medium text-charcoal">Oppervlakte</span>
-                  <span className="text-brown">75m²</span>
+                  <span className="text-brown">63m²</span>
                 </div>
                 <div className="flex justify-between py-3 border-b border-sage/20">
                   <span className="font-medium text-charcoal">Slaapkamers</span>
@@ -150,6 +150,15 @@ const ModelDeluxe = () => {
               <h2 className="text-3xl font-bold text-charcoal mb-6 text-center">
                 Ultieme luxe voor de actieve senior
               </h2>
+              
+              <div className="mb-8 text-center max-w-3xl mx-auto">
+                <p className="text-brown leading-relaxed mb-4">
+                  Lessenaar met een kleine aanbouw voorzien van een plat dak. Geplaatst in een L-vorm waardoor een mooi terras mogelijk werd. De woning heeft een oppervlakte van 63m2 en wordt bewoond door een mevrouw alleen. Slaapkamer met inbouwkast is hierop aangepast zodat er nog ruimte overbleef voor een extra kamer.
+                </p>
+                <p className="text-brown leading-relaxed">
+                  De woning heeft een ruime badkamer aansluitend op de slaapkamer, veel ramen waardoor de niet al te grote woonkamer toch ruim en gezellig overkomt.
+                </p>
+              </div>
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                   <h3 className="text-xl font-bold text-charcoal mb-4">Perfect voor:</h3>
