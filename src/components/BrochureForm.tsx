@@ -61,34 +61,45 @@ const BrochureForm = ({ pdfUrl = "https://www.tuinwoning.nl/app/uploads/2024/02/
     setIsSubmitting(true);
     
     try {
-      // Log form data for now (would be an API call in production)
-      console.log('Form submitted with data:', data);
+      // Submit lead data to Edge Function
+      const response = await fetch('https://ubqyzjndnamunvsqjutc.supabase.co/functions/v1/submit-brochure-lead', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: data.firstName,
+          lastName: data.lastName,
+          email: data.email,
+          phone: data.phone,
+          postcode: data.postcode,
+          houseNumber: data.houseNumber,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to submit lead');
+      }
       
-      // Simulate API call with a delay
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      // Open PDF in new tab (in production, this would be handled by the backend)
+      // Open PDF if URL is provided
       if (pdfUrl) {
         window.open(pdfUrl, '_blank');
       }
       
-      // Success notification
       toast({
         title: "Brochure aangevraagd!",
-        description: "De brochure is verstuurd naar uw e-mailadres en wordt nu geopend.",
+        description: "Uw gegevens zijn opgeslagen en de brochure wordt geopend.",
       });
       
-      // Reset form after successful submission
       form.reset();
-      
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      
-      // Error notification
+    } catch (error: any) {
+      console.error('Form submission error:', error);
       toast({
+        title: "Fout",
+        description: error.message || "Er is iets misgegaan. Probeer het opnieuw.",
         variant: "destructive",
-        title: "Er is een fout opgetreden",
-        description: "Probeer het later nog eens of neem contact met ons op.",
       });
     } finally {
       setIsSubmitting(false);
