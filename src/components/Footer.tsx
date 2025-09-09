@@ -72,9 +72,9 @@ const Footer = () => {
         <div className="border-t border-white/10 mt-8 pt-8 text-center text-white/60 text-sm">
           <p>© {new Date().getFullYear()} Tuinwoning.nl. Alle rechten voorbehouden.</p>
           <div className="mt-2 space-x-4">
-            <Link to="/privacybeleid" className="hover:text-white transition-colors">Privacybeleid</Link>
+            <a href="https://www.tuinwoning.nl/app/uploads/2020/06/privacy_statement_24-06-2020.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Privacybeleid</a>
             <Link to="/cookies" className="hover:text-white transition-colors">Cookiebeleid</Link>
-            <Link to="/algemene-voorwaarden" className="hover:text-white transition-colors">Algemene Voorwaarden</Link>
+            <a href="https://www.tuinwoning.nl/app/uploads/2024/07/Algemene-leverings-en-betalingsvoorwaarden-A-4-5-2020.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Algemene Voorwaarden</a>
           </div>
         </div>
       </div>
